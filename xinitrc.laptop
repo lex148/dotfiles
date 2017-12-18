@@ -1,0 +1,24 @@
+## The following variable defines the session which is started if the user doesn't explicitly select a session
+## Source: http://svn.berlios.de/svnroot/repos/slim/trunk/xinitrc.sample
+#
+#DEFAULT_SESSION=xmonad
+
+
+start-pulseaudio-x11 &
+./Documents/backgrounds/.wallpaper_random.sh &
+syndaemon -k -i 2 -d &
+
+case $1 in
+  gnome)
+    exec gnome-session
+    ;;
+  lxde)
+    exec startlxde
+    ;;
+  xmonad|*)
+    LightRead &
+    xsetroot -cursor_name left_ptr
+    xmonad
+    ;;
+esac
+

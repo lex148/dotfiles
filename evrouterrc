@@ -1,0 +1,8 @@
+Window ""
+
+"Griffin PowerMate" "" any key/256 "Shell/pamixer --toggle-mute"
+"Griffin PowerMate" "" any rel/7/-1 "Shell/pamixer --decrease 1"
+"Griffin PowerMate" "" any rel/7/1 "Shell/pamixer --increase 1"
+
+#"Griffin PowerMate" "" any rel/7/1 "XKey/XF86AudioRaiseVolume"
+#"Griffin PowerMate" "" any rel/7/-1 "XKey/XF86AudioLowerVolume"

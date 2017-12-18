@@ -1,0 +1,21 @@
+out_to_x no
+own_window no
+out_to_console yes
+double_buffer no
+background no
+update_interval 2.0
+total_run_times 0
+short_units yes
+if_up_strictness address
+use_spacer left
+override_utf8_locale no
+cpu_avg_samples 2
+
+TEXT
+/home ${fs_free /home} | \
+${if_up enp0s25_nope}enp0s25 ${addr enp0s25} | ${endif}\
+${if_up wlan0}wlan0 ${addr wlan0} | ${endif}\
+CPUS  ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}% | \
+RAM ${memperc}% | \
+${time %y-%m-%d} ${time %l:%M %p} \
+
